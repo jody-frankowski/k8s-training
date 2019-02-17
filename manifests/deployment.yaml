@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-server
+  labels:
+    run: hello-server
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      run: hello-server
+  template:
+    metadata:
+      labels:
+        run: hello-server
+    spec:
+      containers:
+      - image: gcr.io/google-samples/hello-app:1.0
+        name: hello-server
+        ports:
+        - containerPort: 8080
+          protocol: TCP
