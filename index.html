@@ -1,1 +1,64 @@
-k8s.html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kubernetes 101</title>
+        <meta charset="utf-8">
+        <style>
+         @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+         @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+         @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+         body { font-family: 'Droid Serif'; }
+         h1, h2, h3 {
+             font-family: 'Yanone Kaffeesatz';
+             font-weight: normal;
+         }
+         .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+         /* My modifications */
+         .remark-inline-code {
+             font-family: Monaco,Menlo,Consolas,"Courier New",!monospace important;
+             white-space: normal;
+             color: #d72b3f;
+             padding: 2px 3px 1px;
+             font-variant-ligatures: none;
+             tab-size: 4;
+             padding: 2px 4px;
+             color: #d14;
+             background-color: #f7f7f9;
+             border: 1px solid #e1e1e8;
+             white-space: nowrap;
+         }
+
+         /* Gives a little more vertical room */
+         .remark-slide-content h1 {
+             font-size: 50px;
+         }
+         .remark-slide-content {
+             padding: 0em 4em 1em 4em;
+         }
+        </style>
+    </head>
+    <body>
+        <!-- <textarea id="source"> -->
+        <!-- </textarea> -->
+        <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+        </script>
+        <script>
+         var slideshow = remark.create({
+             sourceUrl: 'k8s.md',
+             /* ratio: '16:9', */
+             navigation: {
+                 scroll: false,
+             },
+             highlightStyle: 'solarized-light',
+             highlightLines: true,
+             /* Disable the slide numbers */
+             slideNumberFormat: '',
+         });
+        </script>
+        <script>
+         document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+        </script>
+    </body>
+</html>
