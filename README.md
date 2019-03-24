@@ -1,6 +1,7 @@
 # Kubernetes Training
 
 * Open index.html in your browser for the slides
+* Type `P` for the speaker notes
 * The `manifests` directory contains example manifests for some of the
   exercises/examples.
 * The `terraform` directory contains terraform manifests to create the
